@@ -1,20 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg72hxyxsi3ky"]
+[gd_scene load_steps=11 format=3 uid="uid://dg72hxyxsi3ky"]
+
+[ext_resource type="Texture2D" uid="uid://dqpm815ae12g5" path="res://Sprites/Sprites/Player/Player_metroid.png" id="1_4isu1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpgy7"]
+radius = 6.0
+height = 22.0
+
+[sub_resource type="Animation" id="Animation_b3uaw"]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id="Animation_yk71o"]
+resource_name = "Walk"
+
+[sub_resource type="Animation" id="Animation_bne52"]
+resource_name = "Jump"
+
+[sub_resource type="Animation" id="Animation_4sduh"]
+resource_name = "Fall"
+
+[sub_resource type="Animation" id="Animation_8eokw"]
+resource_name = "Sword"
+
+[sub_resource type="Animation" id="Animation_dpa27"]
+resource_name = "Dead"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3whc1"]
+_data = {
+"Dead": SubResource("Animation_dpa27"),
+"Fall": SubResource("Animation_4sduh"),
+"Idle": SubResource("Animation_b3uaw"),
+"Jump": SubResource("Animation_bne52"),
+"Sword": SubResource("Animation_8eokw"),
+"Walk": SubResource("Animation_yk71o")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmrr8"]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4isu1")
+hframes = 8
+vframes = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_bpgy7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3whc1")
+}
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="sword" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword"]
+position = Vector2(26, 0)
 shape = SubResource("RectangleShape2D_gmrr8")
 debug_color = Color(0.976471, 0, 0.4, 0.419608)
