@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqw17vw28egrn"]
+[gd_scene load_steps=4 format=3 uid="uid://dqw17vw28egrn"]
 
 [ext_resource type="PackedScene" uid="uid://cwyyreo3gvvmj" path="res://Scenes/Player/player.tscn" id="1_5bnao"]
+[ext_resource type="Texture2D" uid="uid://do4rj7cwjbgmu" path="res://Sprites/Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="2_pmrje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhd83"]
+size = Vector2(46, 16)
 
 [node name="level_1" type="Node2D"]
 
@@ -8,4 +12,61 @@
 position = Vector2(-91, -37)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(33, -43)
 zoom = Vector2(3, 3)
+
+[node name="ground" type="Node2D" parent="."]
+
+[node name="temporary_ground" type="StaticBody2D" parent="ground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground"]
+texture = ExtResource("2_pmrje")
+region_enabled = true
+region_rect = Rect2(32, 80, 47, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground"]
+shape = SubResource("RectangleShape2D_hhd83")
+
+[node name="temporary_ground2" type="StaticBody2D" parent="ground"]
+position = Vector2(46, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground2"]
+texture = ExtResource("2_pmrje")
+region_enabled = true
+region_rect = Rect2(32, 80, 47, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground2"]
+shape = SubResource("RectangleShape2D_hhd83")
+
+[node name="temporary_ground3" type="StaticBody2D" parent="ground"]
+position = Vector2(93, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground3"]
+texture = ExtResource("2_pmrje")
+region_enabled = true
+region_rect = Rect2(32, 80, 47, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground3"]
+shape = SubResource("RectangleShape2D_hhd83")
+
+[node name="temporary_ground4" type="StaticBody2D" parent="ground"]
+position = Vector2(-47, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground4"]
+texture = ExtResource("2_pmrje")
+region_enabled = true
+region_rect = Rect2(32, 80, 47, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground4"]
+shape = SubResource("RectangleShape2D_hhd83")
+
+[node name="temporary_ground5" type="StaticBody2D" parent="ground"]
+position = Vector2(-94, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground5"]
+texture = ExtResource("2_pmrje")
+region_enabled = true
+region_rect = Rect2(32, 80, 47, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground5"]
+shape = SubResource("RectangleShape2D_hhd83")
