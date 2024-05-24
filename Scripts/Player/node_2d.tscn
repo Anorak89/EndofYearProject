@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dg72hxyxsi3ky"]
+[gd_scene load_steps=13 format=3 uid="uid://g7g2pbgp56mr"]
 
-[ext_resource type="Texture2D" uid="uid://dqpm815ae12g5" path="res://Sprites/Sprites/Player/Player_metroid.png" id="1_4isu1"]
-[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_ofviu"]
+[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_oocdj"]
+[ext_resource type="Texture2D" uid="uid://dqpm815ae12g5" path="res://Sprites/Sprites/Player/Player_metroid.png" id="2_v8fed"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpgy7"]
 radius = 6.0
@@ -172,10 +172,10 @@ _data = {
 size = Vector2(16, 21)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_ofviu")
+script = ExtResource("1_oocdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4isu1")
+texture = ExtResource("2_v8fed")
 hframes = 8
 vframes = 7
 

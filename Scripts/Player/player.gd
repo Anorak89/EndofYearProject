@@ -9,16 +9,24 @@ var jump_count = 0
 @export var max_jump = 2
 @export var jump_force = 500
 
+# Everything related to state machine
+var current_state = player_states.MOVE
+enum player_states {MOVE, SWORD, DEAD}
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$sword/sword_collider.disabled = true
+	 # Replace with function body.
+#
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	movement(delta)
+func _physics_process(delta):
+	match current_state:
+		player_states.MOVE:
+			movement(delta)
+		player_states.SWORD:
+			sword()
 
 func movement(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -29,11 +37,14 @@ func movement(delta):
 			velocity.x += speed*delta
 			velocity.x = clamp(speed, 100.0, speed)
 			$Sprite2D.scale.x = 1
+			$sword.position.x = 7
+			$sword.position.y = 7
 			
 		if(input < 0):
 			velocity.x -= speed * delta
 			velocity.x = clamp(-speed, 100.0, -speed)
 			$Sprite2D.scale.x = -1
+			$sword.position.x = -50
 			
 	
 	if(input == 0):
@@ -66,8 +77,17 @@ func movement(delta):
 	else:
 		gravity_force()
 	
+	if Input.is_action_just_pressed("ui_sword"):
+		current_state = player_states.SWORD
+	
 	gravity_force()
 	move_and_slide()
 
 func gravity_force():
 	velocity.y += gravity
+	
+func sword():
+	$AnimationPlayer.play("Sword")
+	
+func reset_states():
+	current_state = player_states.MOVE
