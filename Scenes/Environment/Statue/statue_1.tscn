@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsdl58nb0jf7q"]
+
+[ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="1_i53dk"]
+
+[node name="statue_1" type="Node2D"]
+z_index = -1
+position = Vector2(28, -60)
+
+[node name="head_1" type="Sprite2D" parent="."]
+texture = ExtResource("1_i53dk")
+region_enabled = true
+region_rect = Rect2(64, 111, 16, 19)
+
+[node name="head_2" type="Sprite2D" parent="."]
+position = Vector2(0, 13)
+texture = ExtResource("1_i53dk")
+region_enabled = true
+region_rect = Rect2(80, 111, 16, 19)
+
+[node name="head_3" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_i53dk")
+region_enabled = true
+region_rect = Rect2(36, 103, 25, 13)
+
+[node name="head_4" type="Sprite2D" parent="."]
+position = Vector2(0, 32)
+texture = ExtResource("1_i53dk")
+region_enabled = true
+region_rect = Rect2(4, 104, 24, 24)
