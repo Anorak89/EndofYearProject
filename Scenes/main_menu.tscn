@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvw0rxt5da5qy"]
+
+[ext_resource type="Texture2D" uid="uid://dqgkv6skf4ohr" path="res://FinalGloomspire.png" id="1_q0adg"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 1155.0
+offset_bottom = 649.0
+texture = ExtResource("1_q0adg")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = 302.0
+offset_top = 452.0
+offset_right = 437.936
+offset_bottom = 500.224
