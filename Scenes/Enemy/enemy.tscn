@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://41hxl1ekj51l"]
+
+[ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="1_atliv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqv"]
+
+[node name="enemy" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_atliv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lufqv")
+
+[node name="anim" type="AnimationPlayer" parent="."]
