@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvw0rxt5da5qy"]
+[gd_scene load_steps=4 format=3 uid="uid://dvw0rxt5da5qy"]
 
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_5inse"]
 [ext_resource type="Texture2D" uid="uid://dqgkv6skf4ohr" path="res://FinalGloomspire.png" id="1_q0adg"]
 
+[sub_resource type="SystemFont" id="SystemFont_utjnc"]
+fallbacks = Array[Font]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
 [node name="MainMenu" type="Node"]
+script = ExtResource("1_5inse")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -13,11 +18,27 @@ offset_bottom = 649.0
 texture = ExtResource("1_q0adg")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Play_Button" type="Button" parent="."]
 anchors_preset = -1
 anchor_right = 0.007
 anchor_bottom = 0.012
-offset_left = 302.0
-offset_top = 452.0
-offset_right = 437.936
-offset_bottom = 500.224
+offset_left = 519.0
+offset_top = 410.0
+offset_right = 654.936
+offset_bottom = 458.224
+theme_override_fonts/font = SubResource("SystemFont_utjnc")
+theme_override_font_sizes/font_size = 20
+text = "PLAY"
+
+[node name="Credit_Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = 520.0
+offset_top = 484.0
+offset_right = 655.936
+offset_bottom = 532.224
+theme_override_font_sizes/font_size = 20
+text = "CREDITS"
+
+[connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]
