@@ -42,3 +42,4 @@ theme_override_font_sizes/font_size = 20
 text = "CREDITS"
 
 [connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Credit_Button" to="." method="_on_credit_button_pressed"]

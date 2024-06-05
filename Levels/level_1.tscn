@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=14 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="8_f6si2"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="9_6f2y7"]
 [ext_resource type="PackedScene" uid="uid://bowkposouyhq3" path="res://Scenes/Interactables/spike.tscn" id="11_iys42"]
-[ext_resource type="Script" path="res://Levels/Active_Manager.gd" id="12_826uu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0avgl"]
 texture = ExtResource("2_iyd8u")
@@ -391,8 +390,3 @@ current_state = 1
 [node name="spike4" parent="." instance=ExtResource("11_iys42")]
 position = Vector2(112, 120)
 rotation = 1.5708
-
-[node name="Chars" type="Node2D" parent="."]
-
-[node name="Active_Manager" type="Node" parent="Chars"]
-script = ExtResource("12_826uu")
