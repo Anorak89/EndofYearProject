@@ -1,15 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://41hxl1ekj51l"]
+[gd_scene load_steps=6 format=3 uid="uid://41hxl1ekj51l"]
 
 [ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="1_atliv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqv"]
 
+[sub_resource type="Animation" id="Animation_6n17b"]
+resource_name = "Walking"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_rk6c8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3fmo6"]
+_data = {
+"RESET": SubResource("Animation_rk6c8"),
+"Walking": SubResource("Animation_6n17b")
+}
+
 [node name="enemy" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 13)
 texture = ExtResource("1_atliv")
+hframes = 5
+vframes = 3
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_lufqv")
 
 [node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3fmo6")
+}
