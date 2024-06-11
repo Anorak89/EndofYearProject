@@ -3,7 +3,7 @@ extends CharacterBody2D
 var input 
 @export var speed=100.0
 @export var gravity=10
-
+var dashYes=true
 #variable for jumping
 var jump_count=0
 @export var max_jump=2
@@ -99,24 +99,28 @@ func sword(delta):
 	input_movement(delta)
 	
 func dash():
-	if velocity.x>0:
-		velocity.x+=dash_force
-		await get_tree().create_timer(0.1).timeout
-		current_state=player_states.MOVE
-	elif velocity.x<0:
-		velocity.x-=dash_force
-		await get_tree().create_timer(0.1).timeout
-		current_state=player_states.MOVE
-	else:
-		if $Sprite2D.scale.x==1:
+	if player_data.coin>0:
+		player_data.coin-=1
+		if velocity.x>0:
 			velocity.x+=dash_force
 			await get_tree().create_timer(0.1).timeout
 			current_state=player_states.MOVE
-		if $Sprite2D.scale.x==-1:
+		elif velocity.x<0:
 			velocity.x-=dash_force
 			await get_tree().create_timer(0.1).timeout
 			current_state=player_states.MOVE
-	
+		else:
+			if $Sprite2D.scale.x==1:
+				velocity.x+=dash_force
+				await get_tree().create_timer(0.1).timeout
+				current_state=player_states.MOVE
+			if $Sprite2D.scale.x==-1:
+				velocity.x-=dash_force
+				await get_tree().create_timer(0.1).timeout
+				current_state=player_states.MOVE
+	else:
+		current_state=player_states.MOVE
+		
 	move_and_slide()
 func dead():
 	$anim.play("Dead")
