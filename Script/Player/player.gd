@@ -161,6 +161,9 @@ func input_movement(delta):
 	
 	
 	move_and_slide()
+func hit():
+	player_data.life -= 1
+
 
 func reset_states():
 	current_state=player_states.MOVE

@@ -1,5 +1,4 @@
-extends Area2D
-
+extends CharacterBody2D
 var speed=1
 
 func _physics_process(delta):
@@ -10,6 +9,7 @@ func _physics_process(delta):
 	if position.x>=430:
 		speed-=1
 		$Sprite2D.scale.x=-1
-func _on_body_entered(body):
+func _hit(body):
 	if body.name=='Player':
 		player_data.life-=1
+
