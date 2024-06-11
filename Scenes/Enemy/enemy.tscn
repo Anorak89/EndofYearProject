@@ -43,7 +43,7 @@ _data = {
 "Walking": SubResource("Animation_6n17b")
 }
 
-[node name="enemy" type="Area2D"]
+[node name="enemy" type="CharacterBody2D"]
 collision_layer = 32
 script = ExtResource("1_ppat1")
 
@@ -64,5 +64,3 @@ libraries = {
 "": SubResource("AnimationLibrary_3fmo6")
 }
 autoplay = "Walking"
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
