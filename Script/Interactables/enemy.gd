@@ -1,16 +1,15 @@
-extends PathFollow2D 
-var current_state = enemy_state.WALK
-enum enemy_state{WALK}
+extends Area2D
 
-func movement():
-	if progress_ratio >= 0.5:
-		$Sprite2D.position.x=-1
-		$anim.play("Walking")
-	else:
-		$Sprite2D.position.x=1
-		$anim.play("Walking")
-func _process(delta):
-	match current_state:
-		enemy_state.WALK:
-			movement()
+var speed=1
 
+func _physics_process(delta):
+	position.x+=speed
+	if position.x<=256:
+		speed+=1
+		$Sprite2D.scale.x=1
+	if position.x>=430:
+		speed-=1
+		$Sprite2D.scale.x=-1
+func _on_body_entered(body):
+	if body.name=='Player':
+		player_data.life-=1
