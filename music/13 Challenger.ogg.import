@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://vjr45uyumwwt"
+path="res://.godot/imported/13 Challenger.ogg-a9395b77e66105cedfadf65eb2cb2f8e.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/13 Challenger.ogg"
+dest_files=["res://.godot/imported/13 Challenger.ogg-a9395b77e66105cedfadf65eb2cb2f8e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

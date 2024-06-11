@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cb0e4f1ngbpse"
+path="res://.godot/imported/05 Thought Soup.ogg-22c9beb5bf63c63ab0a29b71cdaef3ec.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/05 Thought Soup.ogg"
+dest_files=["res://.godot/imported/05 Thought Soup.ogg-22c9beb5bf63c63ab0a29b71cdaef3ec.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

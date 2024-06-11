@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://j34syhxwnnm5"
+path="res://.godot/imported/33 Stray Cat (Alternate).ogg-ffc1f150d7e22e4aed3a0995f5920e27.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/33 Stray Cat (Alternate).ogg"
+dest_files=["res://.godot/imported/33 Stray Cat (Alternate).ogg-ffc1f150d7e22e4aed3a0995f5920e27.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6dnms0pxx3lr"
+path="res://.godot/imported/20 Ex Machina.ogg-5c732d0eca7998af8968aebd683e7725.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/20 Ex Machina.ogg"
+dest_files=["res://.godot/imported/20 Ex Machina.ogg-5c732d0eca7998af8968aebd683e7725.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

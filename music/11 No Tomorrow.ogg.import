@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ci03ym27swxmb"
+path="res://.godot/imported/11 No Tomorrow.ogg-15172ed84746239171ff674100907f67.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/11 No Tomorrow.ogg"
+dest_files=["res://.godot/imported/11 No Tomorrow.ogg-15172ed84746239171ff674100907f67.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

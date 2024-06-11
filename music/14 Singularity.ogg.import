@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cl7k2iiy78475"
+path="res://.godot/imported/14 Singularity.ogg-3c6aaef07020e7b15de2f30eb88da9be.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/14 Singularity.ogg"
+dest_files=["res://.godot/imported/14 Singularity.ogg-3c6aaef07020e7b15de2f30eb88da9be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
