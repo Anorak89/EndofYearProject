@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=16 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
@@ -312,6 +312,12 @@ terrain_set_0/terrain_0/name = "Ground 0"
 terrain_set_0/terrain_0/color = Color(0.628995, 0.0848337, 0.583821, 1)
 sources/0 = SubResource("TileSetAtlasSource_0avgl")
 
+[sub_resource type="Curve2D" id="Curve2D_ke8si"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 280, -888, 0, 0, 0, 0, 432, -888, 0, 0, 0, 0, 280, -888)
+}
+point_count = 3
+
 [node name="level_1" type="Node2D"]
 
 [node name="BackgroundSprite1" type="Sprite2D" parent="."]
@@ -471,6 +477,12 @@ current_state = 1
 [node name="crate" parent="." instance=ExtResource("11_y8m1m")]
 position = Vector2(80, -778)
 
-[node name="enemy" parent="." instance=ExtResource("11_qgi6v")]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ke8si")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(280, -888)
+rotates = false
+
+[node name="enemy" parent="Path2D/PathFollow2D" instance=ExtResource("11_qgi6v")]
 texture_filter = 1
-position = Vector2(417, -892)

@@ -47,14 +47,15 @@ _data = {
 script = ExtResource("1_ppat1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 13)
+position = Vector2(2, 10)
+scale = Vector2(1, 0.911765)
 texture = ExtResource("1_atliv")
 hframes = 5
 vframes = 3
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_lufqv")
 
 [node name="anim" type="AnimationPlayer" parent="."]
