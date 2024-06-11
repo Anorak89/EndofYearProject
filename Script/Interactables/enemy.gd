@@ -1,11 +1,15 @@
 extends Area2D
 
+var speed=1
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _physics_process(delta):
+	position.x+=speed
+	if position.x<=256:
+		speed+=1
+		$Sprite2D.scale.x=1
+	if position.x>=430:
+		speed-=1
+		$Sprite2D.scale.x=-1
+func _on_body_entered(body):
+	if body.name=='Player':
+		player_data.life-=1
