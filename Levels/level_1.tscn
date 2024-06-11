@@ -1,10 +1,14 @@
 [gd_scene load_steps=19 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=22 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
 [ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="2_iyd8u"]
 [ext_resource type="PackedScene" uid="uid://bsdl58nb0jf7q" path="res://Scenes/Environment/Statue/statue_1.tscn" id="3_ddirs"]
 [ext_resource type="PackedScene" uid="uid://3pqii5mc538v" path="res://Scenes/Environment/Statue/statue_2.tscn" id="4_50xd5"]
+[ext_resource type="AudioStream" uid="uid://v4eifknoxw7t" path="res://sounds/jump.wav" id="4_hta5l"]
+[ext_resource type="AudioStream" uid="uid://cwyxubgbyxqob" path="res://sounds/explosion.wav" id="5_qbegy"]
+[ext_resource type="AudioStream" uid="uid://31gmiwj7jbi7" path="res://sounds/tap.wav" id="6_ij2k7"]
 [ext_resource type="Script" path="res://Script/UI/GUI.gd" id="8_dkn75"]
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="8_f6si2"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="9_6f2y7"]
@@ -505,6 +509,18 @@ position = Vector2(171, -33)
 collision_mask = 2
 max_jump = 10
 
+[node name="sfx_jump" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("4_hta5l")
+volume_db = -16.0
+
+[node name="sfx_sword" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("5_qbegy")
+volume_db = -16.0
+
+[node name="sfx_dash" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_ij2k7")
+volume_db = -16.0
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
 position = Vector2(204, 159)
@@ -667,6 +683,9 @@ current_state = 1
 position = Vector2(80, -777)
 
 [node name="enemy" parent="." instance=ExtResource("11_qgi6v")]
+position = Vector2(256, -888)
+
+[node name="coin" parent="." instance=ExtResource("13_bfpnw")]
 texture_filter = 1
 position = Vector2(417, -892)
 
