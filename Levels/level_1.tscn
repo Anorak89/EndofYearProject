@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=22 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
 [ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="2_iyd8u"]
 [ext_resource type="PackedScene" uid="uid://bsdl58nb0jf7q" path="res://Scenes/Environment/Statue/statue_1.tscn" id="3_ddirs"]
 [ext_resource type="PackedScene" uid="uid://3pqii5mc538v" path="res://Scenes/Environment/Statue/statue_2.tscn" id="4_50xd5"]
+[ext_resource type="AudioStream" uid="uid://v4eifknoxw7t" path="res://sounds/jump.wav" id="4_hta5l"]
+[ext_resource type="AudioStream" uid="uid://cwyxubgbyxqob" path="res://sounds/explosion.wav" id="5_qbegy"]
+[ext_resource type="AudioStream" uid="uid://31gmiwj7jbi7" path="res://sounds/tap.wav" id="6_ij2k7"]
 [ext_resource type="Script" path="res://Script/UI/GUI.gd" id="8_dkn75"]
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="8_f6si2"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="9_6f2y7"]
@@ -313,6 +316,81 @@ terrain_set_0/terrain_0/name = "Ground 0"
 terrain_set_0/terrain_0/color = Color(0.628995, 0.0848337, 0.583821, 1)
 sources/0 = SubResource("TileSetAtlasSource_0avgl")
 
+[sub_resource type="Animation" id="Animation_3napr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(171, -33)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intro/Camera2D:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro/Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(180, 101)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Intro/RichTextLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Woah..."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Intro/RichTextLabel:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_irmgc"]
 resource_name = "intro"
 length = 5.0
@@ -401,81 +479,6 @@ tracks/6/keys = {
 "values": [false, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_3napr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(171, -33)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Intro/Camera2D:enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Intro/Camera2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(180, 101)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera2D:enabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Intro/RichTextLabel:text")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Woah..."]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Intro/RichTextLabel:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b8vm7"]
 _data = {
 "RESET": SubResource("Animation_3napr"),
@@ -504,6 +507,18 @@ script = ExtResource("1_2yjfj")
 position = Vector2(171, -33)
 collision_mask = 2
 max_jump = 10
+
+[node name="sfx_jump" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("4_hta5l")
+volume_db = -16.0
+
+[node name="sfx_sword" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("5_qbegy")
+volume_db = -16.0
+
+[node name="sfx_dash" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_ij2k7")
+volume_db = -16.0
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -646,7 +661,6 @@ position = Vector2(80, -777)
 position = Vector2(256, -888)
 
 [node name="coin" parent="." instance=ExtResource("13_bfpnw")]
-position = Vector2(331, 32)
 texture_filter = 1
 position = Vector2(417, -892)
 
