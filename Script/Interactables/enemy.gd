@@ -9,7 +9,6 @@ func _physics_process(delta):
 	if position.x>=430:
 		speed-=1
 		$Sprite2D.scale.x=-1
-func _hit(body):
-	if body.name=='Player':
-		player_data.life-=1
-
+	
+	
+	

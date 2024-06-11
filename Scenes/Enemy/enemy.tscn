@@ -3,8 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="1_atliv"]
 [ext_resource type="Script" path="res://Script/Interactables/enemy.gd" id="1_ppat1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqv"]
-
 [sub_resource type="Animation" id="Animation_rk6c8"]
 length = 0.001
 tracks/0/type = "value"
@@ -43,6 +41,8 @@ _data = {
 "Walking": SubResource("Animation_6n17b")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ame6k"]
+
 [node name="enemy" type="CharacterBody2D"]
 collision_layer = 32
 script = ExtResource("1_ppat1")
@@ -55,12 +55,11 @@ hframes = 5
 vframes = 3
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_lufqv")
-
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_3fmo6")
 }
 autoplay = "Walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ame6k")
