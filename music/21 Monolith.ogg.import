@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://g3pwd5b3hols"
+path="res://.godot/imported/21 Monolith.ogg-d26851ac309a718e0ea6abf16cbeea7e.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/21 Monolith.ogg"
+dest_files=["res://.godot/imported/21 Monolith.ogg-d26851ac309a718e0ea6abf16cbeea7e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvmeyxkdnn5cf"
+path="res://.godot/imported/09 Fire in the Hole.ogg-3576db5bcb8897b77f7d9d9c5d8b2733.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/09 Fire in the Hole.ogg"
+dest_files=["res://.godot/imported/09 Fire in the Hole.ogg-3576db5bcb8897b77f7d9d9c5d8b2733.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

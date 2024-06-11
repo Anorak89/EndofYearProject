@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw4gpuucv2tc0"
+path="res://.godot/imported/12 Against All Odds.ogg-92f986368608c64fa78e1be443f8cc2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/12 Against All Odds.ogg"
+dest_files=["res://.godot/imported/12 Against All Odds.ogg-92f986368608c64fa78e1be443f8cc2e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

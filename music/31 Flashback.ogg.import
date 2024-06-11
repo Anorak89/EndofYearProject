@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfocwgxnag0gs"
+path="res://.godot/imported/31 Flashback.ogg-58b535052cf7bb13a26b97797351090f.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/31 Flashback.ogg"
+dest_files=["res://.godot/imported/31 Flashback.ogg-58b535052cf7bb13a26b97797351090f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
