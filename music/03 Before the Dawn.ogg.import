@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsnjrw8hyxrda"
+path="res://.godot/imported/03 Before the Dawn.ogg-ff9377e593199b205d8e8aec749b1cac.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/03 Before the Dawn.ogg"
+dest_files=["res://.godot/imported/03 Before the Dawn.ogg-ff9377e593199b205d8e8aec749b1cac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d38i6gwjngviy"
+path="res://.godot/imported/29 Tyrant's Bounty.ogg-656218ca3ab631e40af04f5b9485c1ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/29 Tyrant's Bounty.ogg"
+dest_files=["res://.godot/imported/29 Tyrant's Bounty.ogg-656218ca3ab631e40af04f5b9485c1ae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clvmcrvnm4vcd"
+path="res://.godot/imported/24 Stray Cat.ogg-9cfe34be4969f08a90eec4ece44a408c.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/24 Stray Cat.ogg"
+dest_files=["res://.godot/imported/24 Stray Cat.ogg-9cfe34be4969f08a90eec4ece44a408c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

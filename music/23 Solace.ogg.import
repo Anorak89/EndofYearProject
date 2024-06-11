@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bw1t7jflr6we6"
+path="res://.godot/imported/23 Solace.ogg-a3e6077b05faaabc92f735f364699f5b.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/23 Solace.ogg"
+dest_files=["res://.godot/imported/23 Solace.ogg-a3e6077b05faaabc92f735f364699f5b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bni0q8b1u3jx6"
+path="res://.godot/imported/08 Gone Fishing.ogg-61465eabf5e141316875c2a71b4f4a9c.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/08 Gone Fishing.ogg"
+dest_files=["res://.godot/imported/08 Gone Fishing.ogg-61465eabf5e141316875c2a71b4f4a9c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
