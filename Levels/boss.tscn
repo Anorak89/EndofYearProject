@@ -267,5 +267,7 @@ theme_override_font_sizes/font_size = 32
 metadata/_edit_use_anchors_ = true
 
 [node name="enemy" parent="." instance=ExtResource("10_aqj0v")]
+texture_filter = 1
 position = Vector2(559, 158)
 scale = Vector2(5, 5)
+slide_on_ceiling = false

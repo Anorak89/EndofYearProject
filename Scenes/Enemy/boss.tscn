@@ -52,15 +52,15 @@ collision_layer = 10
 script = ExtResource("1_12wqc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, 10)
+position = Vector2(0, 9)
 scale = Vector2(1, 0.911765)
 texture = ExtResource("2_lhvls")
+flip_h = true
 hframes = 5
 vframes = 3
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_lufqv")
 
@@ -73,7 +73,6 @@ autoplay = "Walking"
 [node name="enemy_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
-position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_7cnqx")
 
 [node name="attack_cooldown" type="Timer" parent="."]
