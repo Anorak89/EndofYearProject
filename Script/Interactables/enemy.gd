@@ -10,10 +10,10 @@ func _physics_process(delta):
 		queue_free()
 	if $Sprite2D.visible:
 		position.x+=speed
-		if position.x<=256:
+		if position.x<=236:
 			speed+=1
 			$Sprite2D.scale.x=1
-		if position.x>=430:
+		if position.x>=438:
 			speed-=1
 			$Sprite2D.scale.x=-1
 		deal_with_damage()

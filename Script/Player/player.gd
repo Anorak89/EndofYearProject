@@ -207,3 +207,7 @@ func damage_dealt():
 		if !$sword/sword_collider.disabled:
 			enemy.health-=1
 			player_data.life+=1
+
+
+func _on_texture_button_pressed():
+	get_tree().change_scene_to_file("res://Levels/boss.tscn"); # Replace with function body.

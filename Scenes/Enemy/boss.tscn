@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://41hxl1ekj51l"]
+[gd_scene load_steps=8 format=3 uid="uid://dtlvkqdlctbun"]
 
-[ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="1_atliv"]
-[ext_resource type="Script" path="res://Script/Interactables/enemy.gd" id="1_ppat1"]
+[ext_resource type="Script" path="res://Script/Interactables/enemy.gd" id="1_12wqc"]
+[ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="2_lhvls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqv"]
 size = Vector2(5, 5)
@@ -49,12 +49,12 @@ radius = 10.198
 
 [node name="enemy" type="CharacterBody2D"]
 collision_layer = 10
-script = ExtResource("1_ppat1")
+script = ExtResource("1_12wqc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, 10)
 scale = Vector2(1, 0.911765)
-texture = ExtResource("1_atliv")
+texture = ExtResource("2_lhvls")
 hframes = 5
 vframes = 3
 frame = 1
