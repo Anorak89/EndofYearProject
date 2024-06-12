@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d10m5s64q8lkr"]
+
+[ext_resource type="AudioStream" uid="uid://cvev4o78bd40r" path="res://music/26 Ruin.ogg" id="1_5rihx"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_5rihx")
+autoplay = true
