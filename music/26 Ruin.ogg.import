@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/26 Ruin.ogg-0f79c8b2d503145d89e593ad7b9768eb.
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
