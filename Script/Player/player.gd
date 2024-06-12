@@ -28,7 +28,6 @@ enum player_states{MOVE, SWORD, DEAD, DASH}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$sword/sword_collider.disabled=true # Replace with function body.
-	damage_dealt()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -202,6 +201,9 @@ static func _on_sword_body_exited(body):
 	if body.has_method("enemy"):
 		enemy.player_inattackzone=false
 		enemy_in_attackrange=false
+
 func damage_dealt():
 	if enemy.player_inattackzone:
-		enemy.health-=1
+		if !$sword/sword_collider.disabled:
+			enemy.health-=1
+			player_data.life+=1
