@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://41hxl1ekj51l"]
+[gd_scene load_steps=8 format=3 uid="uid://41hxl1ekj51l"]
 
 [ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="1_atliv"]
 [ext_resource type="Script" path="res://Script/Interactables/enemy.gd" id="1_ppat1"]
@@ -43,8 +43,11 @@ _data = {
 "Walking": SubResource("Animation_6n17b")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7cnqx"]
+radius = 15.0
+
 [node name="enemy" type="CharacterBody2D"]
-collision_layer = 32
+collision_layer = 10
 script = ExtResource("1_ppat1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -64,3 +67,15 @@ libraries = {
 "": SubResource("AnimationLibrary_3fmo6")
 }
 autoplay = "Walking"
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_7cnqx")
+
+[node name="attack_cooldown" type="Timer" parent="."]
+
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

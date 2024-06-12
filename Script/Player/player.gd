@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+var enemy_in_attackrange=false
+var enemy_attack_cooldown=true
 
 @onready var sfx_jump = $sfx_jump
 @onready var sfx_sword = $sfx_sword
@@ -27,6 +28,7 @@ enum player_states{MOVE, SWORD, DEAD, DASH}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$sword/sword_collider.disabled=true # Replace with function body.
+	#enemy_attack()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,6 +44,7 @@ func _physics_process(delta):
 			dead()
 		player_states.DASH:
 			dash()
+	
 	
 func movement(delta):
 	input = Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")
@@ -168,3 +171,20 @@ func hit():
 func reset_states():
 	current_state=player_states.MOVE
 	
+
+func player():
+	pass
+
+#func _on_hitbox_body_entered(body):
+	#if body.has_method("enemy"):
+		#enemy_in_attackrange=true
+#
+#
+#
+#func _on_hitbox_body_exited(body):
+	#if body.has_method("enemy"):
+		#enemy_in_attackrange=false
+#
+#func enemy_attack():
+	#if enemy_in_attackrange:
+		#player_data.life-=1
