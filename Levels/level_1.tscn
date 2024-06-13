@@ -497,6 +497,7 @@ texture = ExtResource("12_vfanb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundSprite1"]
 stream = ExtResource("2_nw2ye")
+volume_db = -20.0
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
