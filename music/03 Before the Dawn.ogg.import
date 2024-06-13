@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/03 Before the Dawn.ogg-ff9377e593199b205d8e8a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

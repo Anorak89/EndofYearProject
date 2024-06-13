@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvx3t0oi1pnku"]
+[gd_scene load_steps=9 format=3 uid="uid://bvx3t0oi1pnku"]
 
 [ext_resource type="Script" path="res://Script/Interactables/enemy.gd" id="1_12wqc"]
 [ext_resource type="Texture2D" uid="uid://uw5nclf1rvu" path="res://Sprites/Enemies/enemy_rpg.png" id="2_lhvls"]
+[ext_resource type="AudioStream" uid="uid://f47amk5j4big" path="res://music/17 Rivaling Force.ogg" id="3_2wkiy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqv"]
 size = Vector2(5, 5)
@@ -75,6 +76,10 @@ autoplay = "Walking"
 shape = SubResource("CircleShape2D_7cnqx")
 
 [node name="attack_cooldown" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2wkiy")
+autoplay = true
 
 [connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]

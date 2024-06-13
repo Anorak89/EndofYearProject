@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqy14lxnvonmm"]
+[gd_scene load_steps=14 format=3 uid="uid://cqy14lxnvonmm"]
 
 [ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="1_tbr5j"]
 [ext_resource type="Texture2D" uid="uid://c4fym5sovouty" path="res://Sprites/Environment/background_sprite_1.png" id="2_bu7fh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="9_gwt5x"]
 [ext_resource type="PackedScene" uid="uid://bvx3t0oi1pnku" path="res://Scenes/Enemy/boss.tscn" id="10_aqj0v"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="10_x3fh5"]
+[ext_resource type="PackedScene" uid="uid://bowkposouyhq3" path="res://Scenes/Interactables/spike.tscn" id="11_pof1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s7t2"]
 texture = ExtResource("1_tbr5j")
@@ -216,7 +217,7 @@ sources/0 = SubResource("TileSetAtlasSource_6s7t2")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m0oim")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 327680, 0, 1, 393216, 0, 1, 458752, 0, 1, 524288, 0, 1, 589824, 0, 1, 655360, 0, 1, 720896, 0, 1, 786432, 0, 2, 786433, 65536, 2, 786434, 65536, 2, 786435, 65536, 2, 786436, 65536, 2, 786437, 65536, 2, 786438, 65536, 2, 786439, 65536, 2, 786440, 65536, 2, 786441, 65536, 2, 786442, 65536, 2, 786443, 65536, 2, 786444, 65536, 2, 786445, 65536, 2, 786446, 65536, 2, 786447, 65536, 2, 786448, 65536, 2, 786449, 65536, 2, 786450, 65536, 2, 786451, 65536, 2, 786452, 65536, 2, 786453, 65536, 2, 786454, 65536, 2, 786455, 65536, 2, 786456, 65536, 2, 786457, 65536, 2, 786458, 65536, 2, 786459, 65536, 2, 786460, 65536, 2, 786461, 65536, 2, 786462, 65536, 2, 786463, 65536, 2, 786464, 65536, 2, 786465, 65536, 2, 786466, 65536, 2, 786467, 65536, 2, 786468, 65536, 2, 786469, 65536, 2, 786470, 65536, 2, 786471, 65536, 2, 786472, 65536, 2, 786473, 65536, 2, 786474, 65536, 2, 786475, 65536, 2, 786476, 131072, 2, 65580, 131072, 1, 131116, 131072, 1, 196652, 131072, 1, 262188, 131072, 1, 327724, 131072, 1, 393260, 131072, 1, 458796, 131072, 1, 524332, 131072, 1, 589868, 131072, 1, 655404, 131072, 1, 720940, 131072, 1, 44, 131072, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 14, 65536, 0, 15, 65536, 0, 16, 65536, 0, 17, 65536, 0, 18, 65536, 0, 19, 65536, 0, 20, 65536, 0, 21, 65536, 0, 22, 65536, 0, 23, 65536, 0, 24, 65536, 0, 25, 65536, 0, 26, 65536, 0, 27, 65536, 0, 28, 65536, 0, 29, 65536, 0, 30, 65536, 0, 31, 65536, 0, 32, 65536, 0, 33, 65536, 0, 34, 65536, 0, 35, 65536, 0, 36, 65536, 0, 37, 65536, 0, 38, 65536, 0, 39, 65536, 0, 40, 65536, 0, 41, 65536, 0, 42, 65536, 0, 43, 65536, 0)
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 327680, 0, 1, 393216, 0, 1, 458752, 0, 1, 524288, 0, 1, 589824, 0, 1, 655360, 0, 1, 720896, 0, 1, 786432, 0, 2, 786433, 65536, 2, 786434, 65536, 2, 786435, 65536, 2, 786436, 65536, 2, 786437, 65536, 2, 786438, 65536, 2, 786439, 65536, 2, 786440, 65536, 2, 786441, 65536, 2, 786442, 65536, 2, 786443, 65536, 2, 786444, 65536, 2, 786445, 65536, 2, 786446, 65536, 2, 786447, 65536, 2, 786448, 65536, 2, 786449, 65536, 2, 786450, 65536, 2, 786451, 65536, 2, 786452, 65536, 2, 786453, 65536, 2, 786454, 65536, 2, 786455, 65536, 2, 786456, 65536, 2, 786457, 65536, 2, 786458, 65536, 2, 786459, 65536, 2, 786460, 65536, 2, 786461, 65536, 2, 786462, 65536, 2, 786463, 65536, 2, 786464, 65536, 2, 786465, 65536, 2, 786466, 65536, 2, 786467, 65536, 2, 786468, 65536, 2, 786469, 65536, 2, 786470, 65536, 2, 786471, 65536, 2, 786472, 65536, 2, 786473, 65536, 2, 786474, 65536, 2, 786475, 65536, 2, 786476, 131072, 2, 65580, 131072, 1, 131116, 131072, 1, 196652, 131072, 1, 262188, 131072, 1, 327724, 131072, 1, 393260, 131072, 1, 458796, 131072, 1, 524332, 131072, 1, 589868, 131072, 1, 655404, 131072, 1, 720940, 131072, 1, 44, 131072, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 14, 65536, 0, 15, 65536, 0, 16, 65536, 0, 17, 65536, 0, 18, 65536, 0, 19, 65536, 0, 20, 65536, 0, 21, 65536, 0, 22, 65536, 0, 23, 65536, 0, 24, 65536, 0, 25, 65536, 0, 26, 65536, 0, 27, 65536, 0, 28, 65536, 0, 29, 65536, 0, 30, 65536, 0, 31, 65536, 0, 32, 65536, 0, 33, 65536, 0, 34, 65536, 0, 35, 65536, 0, 36, 65536, 0, 37, 65536, 0, 38, 65536, 0, 39, 65536, 0, 40, 65536, 0, 41, 65536, 0, 42, 65536, 0, 43, 65536, 0, 327692, 0, 0, 327693, 65536, 0, 327694, 131072, 0, 393230, 131072, 2, 393229, 65536, 2, 393228, 0, 2)
 
 [node name="BackgroundSprite1" type="Sprite2D" parent="."]
 z_index = -1
@@ -271,3 +272,244 @@ texture_filter = 1
 position = Vector2(560, 160)
 scale = Vector2(5, 5)
 slide_on_ceiling = false
+
+[node name="spike" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(87, 183)
+
+[node name="spike2" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(44, 183)
+
+[node name="spike4" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(23, 183)
+
+[node name="spike3" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(65, 183)
+
+[node name="spike5" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(95, 23)
+rotation = -3.14159
+
+[node name="spike6" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(115, 23)
+rotation = -3.14159
+
+[node name="spike7" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(135, 23)
+rotation = -3.14159
+
+[node name="spike8" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(155, 23)
+rotation = -3.14159
+
+[node name="spike9" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(175, 23)
+rotation = -3.14159
+
+[node name="spike10" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(192, 23)
+rotation = -3.14159
+
+[node name="spike11" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(211, 23)
+rotation = -3.14159
+
+[node name="spike12" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(230, 23)
+rotation = -3.14159
+
+[node name="spike13" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(250, 23)
+rotation = -3.14159
+
+[node name="spike14" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(269, 23)
+rotation = -3.14159
+
+[node name="spike15" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(288, 23)
+rotation = -3.14159
+
+[node name="spike16" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(308, 23)
+rotation = -3.14159
+
+[node name="spike17" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(327, 23)
+rotation = -3.14159
+
+[node name="spike18" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(347, 23)
+rotation = -3.14159
+
+[node name="spike19" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(365, 23)
+rotation = -3.14159
+
+[node name="spike20" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(384, 23)
+rotation = -3.14159
+
+[node name="spike21" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(403, 23)
+rotation = -3.14159
+
+[node name="spike22" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(422, 23)
+rotation = -3.14159
+
+[node name="spike23" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(440, 23)
+rotation = -3.14159
+
+[node name="spike25" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(461, 23)
+rotation = -3.14159
+
+[node name="spike26" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(481, 23)
+rotation = -3.14159
+
+[node name="spike27" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(501, 23)
+rotation = -3.14159
+
+[node name="spike28" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(521, 23)
+rotation = -3.14159
+
+[node name="spike29" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(540, 23)
+rotation = -3.14159
+
+[node name="spike30" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(556, 23)
+rotation = -3.14159
+
+[node name="spike31" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(572, 23)
+rotation = -3.14159
+
+[node name="spike32" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(587, 23)
+rotation = -3.14159
+
+[node name="spike33" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(605, 23)
+rotation = -3.14159
+
+[node name="spike34" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(622, 23)
+rotation = -3.14159
+
+[node name="spike35" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(640, 23)
+rotation = -3.14159
+
+[node name="spike36" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(658, 23)
+rotation = -3.14159
+
+[node name="spike37" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(677, 23)
+rotation = -3.14159
+
+[node name="spike38" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 47)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike39" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 61)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike40" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 76)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike41" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 90)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike42" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 105)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike43" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 119)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike44" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 135)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike45" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 149)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike46" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 164)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike47" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(697, 179)
+rotation = -1.5708
+current_state = 1
+
+[node name="spike48" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(413, 183)
+current_state = 1
+
+[node name="spike49" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(397, 183)
+current_state = 1
+
+[node name="spike50" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(312, 182)
+current_state = 1
+
+[node name="spike51" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(296, 182)
+current_state = 1
+
+[node name="spike52" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(281, 182)
+current_state = 1
+
+[node name="spike53" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(629, 183)
+current_state = 1
+
+[node name="spike54" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(648, 183)
+current_state = 1
+
+[node name="spike55" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(231, 71)
+current_state = 1
+
+[node name="spike56" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(205, 71)
+current_state = 1
+
+[node name="spike57" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(197, 119)
+rotation = 3.14159
+current_state = 1
+
+[node name="spike58" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(217, 119)
+rotation = 3.14159
+current_state = 1
+
+[node name="spike59" parent="." instance=ExtResource("11_pof1t")]
+position = Vector2(237, 119)
+rotation = 3.14159
+current_state = 1

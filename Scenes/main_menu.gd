@@ -13,7 +13,7 @@ func _process(delta):
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn"); # Replace with function body.
-	
+	player_data.life=8
 
 
 

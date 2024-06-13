@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://uuibc6cnxul6"]
+
+[ext_resource type="AudioStream" uid="uid://f47amk5j4big" path="res://music/17 Rivaling Force.ogg" id="1_5hdoj"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_5hdoj")
+autoplay = true
