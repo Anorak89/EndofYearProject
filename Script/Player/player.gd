@@ -141,10 +141,10 @@ func dead():
 	gravity_force()
 	move_and_slide()
 	await $anim.animation_finished
-	player_data.life=4
+	# player_data.life=10
 	player_data.coin=0
 	if get_tree():
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn");
 
 func input_movement(delta):
 	input = Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")

@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bvx3t0oi1pnku" path="res://Scenes/Enemy/boss.tscn" id="10_aqj0v"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="10_x3fh5"]
 [ext_resource type="PackedScene" uid="uid://bowkposouyhq3" path="res://Scenes/Interactables/spike.tscn" id="11_pof1t"]
-[ext_resource type="AudioStream" uid="uid://f47amk5j4big" path="res://music/17 Rivaling Force.ogg" id="11_4aj03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s7t2"]
 texture = ExtResource("1_tbr5j")
@@ -514,6 +513,3 @@ current_state = 1
 position = Vector2(237, 119)
 rotation = 3.14159
 current_state = 1
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_4aj03")
-autoplay = true
