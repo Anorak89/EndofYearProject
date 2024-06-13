@@ -205,8 +205,7 @@ static func _on_sword_body_exited(body):
 func damage_dealt():
 	if enemy.player_inattackzone:
 		if !$sword/sword_collider.disabled:
-			enemy.health-=1
-			player_data.life+=1
+			enemy.health-= 0.01
 
 
 func _on_texture_button_pressed():

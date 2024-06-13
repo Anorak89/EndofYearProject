@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://31gmiwj7jbi7" path="res://sounds/tap.wav" id="6_5o2nd"]
 [ext_resource type="Script" path="res://Script/UI/GUI.gd" id="8_7l3o6"]
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="9_gwt5x"]
-[ext_resource type="PackedScene" uid="uid://dtlvkqdlctbun" path="res://Scenes/Enemy/boss.tscn" id="10_aqj0v"]
+[ext_resource type="PackedScene" uid="uid://bvx3t0oi1pnku" path="res://Scenes/Enemy/boss.tscn" id="10_aqj0v"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="10_x3fh5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s7t2"]
@@ -268,6 +268,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="enemy" parent="." instance=ExtResource("10_aqj0v")]
 texture_filter = 1
-position = Vector2(559, 158)
+position = Vector2(560, 160)
 scale = Vector2(5, 5)
 slide_on_ceiling = false

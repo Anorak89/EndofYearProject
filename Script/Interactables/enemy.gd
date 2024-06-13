@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name enemy
 var speed=1
 static var player_inattackzone=false
-static var health=1
+static var health= 0.3
 var enemy_attack_cooldown=true;
 
 func _physics_process(delta):
@@ -10,10 +10,10 @@ func _physics_process(delta):
 		queue_free()
 	if $Sprite2D.visible:
 		position.x+=speed
-		if position.x<=236:
+		if position.x<=50:
 			speed+=1
 			$Sprite2D.scale.x=1
-		if position.x>=438:
+		if position.x>=650:
 			speed-=1
 			$Sprite2D.scale.x=-1
 		deal_with_damage()

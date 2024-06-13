@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=23 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="8_f6si2"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="9_6f2y7"]
 [ext_resource type="PackedScene" uid="uid://bowkposouyhq3" path="res://Scenes/Interactables/spike.tscn" id="10_iy3ut"]
-[ext_resource type="PackedScene" uid="uid://41hxl1ekj51l" path="res://Scenes/Enemy/enemy.tscn" id="11_qgi6v"]
 [ext_resource type="PackedScene" uid="uid://by6irwmpe32c7" path="res://Scenes/Interactables/crate.tscn" id="11_y8m1m"]
 [ext_resource type="Texture2D" uid="uid://c4fym5sovouty" path="res://Sprites/Environment/background_sprite_1.png" id="12_vfanb"]
 [ext_resource type="PackedScene" uid="uid://d2u8v46gg7gyh" path="res://Scenes/Interactables/coin.tscn" id="13_bfpnw"]
@@ -600,10 +599,10 @@ text = "Press X to slash the crate!"
 z_index = -1
 offset_left = 284.0
 offset_top = -971.0
-offset_right = 510.0
+offset_right = 435.0
 offset_bottom = -931.0
 theme_override_font_sizes/normal_font_size = 11
-text = "Be careful of enemies!"
+text = "You can use coins to dash! Press Q!"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
 z_index = -1
@@ -660,12 +659,29 @@ current_state = 1
 [node name="crate" parent="." instance=ExtResource("11_y8m1m")]
 position = Vector2(80, -777)
 
-[node name="enemy" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(256, -888)
-
 [node name="coin" parent="." instance=ExtResource("13_bfpnw")]
 texture_filter = 1
-position = Vector2(417, -892)
+position = Vector2(417, -891)
+
+[node name="coin2" parent="." instance=ExtResource("13_bfpnw")]
+texture_filter = 1
+position = Vector2(365, -891)
+
+[node name="coin3" parent="." instance=ExtResource("13_bfpnw")]
+texture_filter = 1
+position = Vector2(306, -891)
+
+[node name="coin4" parent="." instance=ExtResource("13_bfpnw")]
+texture_filter = 1
+position = Vector2(263, -891)
+
+[node name="coin5" parent="." instance=ExtResource("13_bfpnw")]
+texture_filter = 1
+position = Vector2(109, -908)
+
+[node name="coin6" parent="." instance=ExtResource("13_bfpnw")]
+texture_filter = 1
+position = Vector2(155, -1307)
 
 [node name="Intro" type="AnimationPlayer" parent="."]
 libraries = {
@@ -700,7 +716,7 @@ position = Vector2(38, -985)
 current_state = 1
 
 [node name="spike2" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(59, -986)
+position = Vector2(59, -985)
 current_state = 1
 
 [node name="spike3" parent="." instance=ExtResource("10_iy3ut")]
@@ -708,11 +724,11 @@ position = Vector2(58, -1113)
 current_state = 1
 
 [node name="spike5" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(26, -1241)
+position = Vector2(27, -1241)
 current_state = 1
 
 [node name="spike6" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(60, -1242)
+position = Vector2(60, -1241)
 current_state = 1
 
 [node name="spike4" parent="." instance=ExtResource("10_iy3ut")]
@@ -720,15 +736,15 @@ position = Vector2(37, -1113)
 current_state = 1
 
 [node name="spike7" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(131, -1273)
+position = Vector2(132, -1275)
 rotation = -1.5708
 
 [node name="spike8" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(130, -1290)
+position = Vector2(132, -1287)
 rotation = -1.5708
 
 [node name="spike9" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(371, -1396)
+position = Vector2(372, -1396)
 rotation = -1.5708
 
 [node name="spike10" parent="." instance=ExtResource("10_iy3ut")]
@@ -736,7 +752,7 @@ position = Vector2(340, -1420)
 rotation = 1.5708
 
 [node name="spike15" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(341, -1477)
+position = Vector2(340, -1477)
 rotation = 1.5708
 
 [node name="spike28" parent="." instance=ExtResource("10_iy3ut")]
@@ -748,35 +764,35 @@ position = Vector2(179, -1993)
 rotation = 1.5708
 
 [node name="spike30" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(117, -2072)
+position = Vector2(116, -2071)
 rotation = 1.5708
 
 [node name="spike31" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(116, -2055)
+position = Vector2(116, -2059)
 rotation = 1.5708
 
 [node name="spike18" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(245, -1543)
+position = Vector2(244, -1543)
 rotation = 1.5708
 
 [node name="spike21" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(117, -1623)
+position = Vector2(116, -1623)
 rotation = 1.5708
 
 [node name="spike22" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(116, -1607)
+position = Vector2(116, -1611)
 rotation = 1.5708
 
 [node name="spike19" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(245, -1529)
+position = Vector2(244, -1529)
 rotation = 1.5708
 
 [node name="spike20" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(245, -1514)
+position = Vector2(244, -1515)
 rotation = 1.5708
 
 [node name="spike16" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(341, -1458)
+position = Vector2(340, -1458)
 rotation = 1.5708
 
 [node name="spike17" parent="." instance=ExtResource("10_iy3ut")]
@@ -784,15 +800,15 @@ position = Vector2(340, -1439)
 rotation = 1.5708
 
 [node name="spike11" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(371, -1476)
+position = Vector2(372, -1476)
 rotation = -1.5708
 
 [node name="spike23" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(147, -1704)
+position = Vector2(148, -1703)
 rotation = -1.5708
 
 [node name="spike25" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(259, -1770)
+position = Vector2(260, -1769)
 rotation = -1.5708
 
 [node name="spike26" parent="." instance=ExtResource("10_iy3ut")]
@@ -800,50 +816,32 @@ position = Vector2(229, -1929)
 rotation = -1.5708
 
 [node name="spike27" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(163, -2153)
+position = Vector2(164, -2153)
 rotation = -1.5708
 
 [node name="spike24" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(148, -1688)
+position = Vector2(148, -1691)
 rotation = -1.5708
 
 [node name="spike12" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(371, -1456)
+position = Vector2(372, -1456)
 rotation = -1.5708
 
 [node name="spike13" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(371, -1436)
+position = Vector2(372, -1436)
 rotation = -1.5708
 
 [node name="spike14" parent="." instance=ExtResource("10_iy3ut")]
-position = Vector2(371, -1416)
+position = Vector2(372, -1416)
 rotation = -1.5708
 
 [node name="crate2" parent="." instance=ExtResource("11_y8m1m")]
 position = Vector2(314, -1401)
 
 [node name="crate3" parent="." instance=ExtResource("11_y8m1m")]
-position = Vector2(313, -1369)
+position = Vector2(314, -1369)
 
 [node name="crate4" parent="." instance=ExtResource("11_y8m1m")]
-position = Vector2(314, -1384)
-
-[node name="enemy2" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(298, -2217)
-
-[node name="enemy3" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(92, -2089)
-
-[node name="enemy4" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(174, -1720)
-
-[node name="enemy5" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(91, -1640)
-
-[node name="enemy6" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(199, -1560)
-
-[node name="enemy7" parent="." instance=ExtResource("11_qgi6v")]
-position = Vector2(157, -1304)
+position = Vector2(314, -1385)
 
 [connection signal="pressed" from="TextureButton" to="Player" method="_on_texture_button_pressed"]
