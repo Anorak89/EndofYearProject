@@ -8,6 +8,7 @@ var enemy_attack_cooldown=true;
 func _physics_process(delta):
 	if(health<=0):
 		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/ending.tscn")
 	if $Sprite2D.visible:
 		position.x+=speed
 		if position.x<=50:
