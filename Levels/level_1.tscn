@@ -607,7 +607,7 @@ offset_top = -971.0
 offset_right = 435.0
 offset_bottom = -931.0
 theme_override_font_sizes/normal_font_size = 11
-text = "You can use coins to dash! Press Q!"
+text = "Press Q to Dash!"
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="Text"]
 z_index = -1

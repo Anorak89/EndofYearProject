@@ -18,7 +18,7 @@ var jump_count=0
 
 
 #About Dash
-@export var dash_force=600
+@export var dash_force=300
 
 
 #everything related to state machine
@@ -112,8 +112,6 @@ func sword(delta):
 	input_movement(delta)
 	
 func dash():
-	if player_data.coin>0:
-		player_data.coin-=1
 		if velocity.x>0:
 			velocity.x+=dash_force
 			await get_tree().create_timer(0.1).timeout
@@ -131,10 +129,7 @@ func dash():
 				velocity.x-=dash_force
 				await get_tree().create_timer(0.1).timeout
 				current_state=player_states.MOVE
-	else:
-		current_state=player_states.MOVE
-		
-	move_and_slide()
+		move_and_slide()
 func dead():
 	$anim.play("Dead")
 	velocity.x=0 
