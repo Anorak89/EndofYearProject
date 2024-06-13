@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/17 Rivaling Force.ogg-5afcdada11863f478e0ed97
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
