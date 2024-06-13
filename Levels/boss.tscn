@@ -214,6 +214,57 @@ texture = ExtResource("1_tbr5j")
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_6s7t2")
 
+[sub_resource type="Animation" id="Animation_248o8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(121, 170)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/RichTextLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_xq05s"]
 resource_name = "enter"
 length = 5.0
@@ -264,57 +315,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
-}
-
-[sub_resource type="Animation" id="Animation_248o8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(121, 170)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/Sprite2D:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer/RichTextLabel:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_73457"]
@@ -385,16 +385,16 @@ scale = Vector2(5, 5)
 slide_on_ceiling = false
 
 [node name="spike" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(87, 183)
+position = Vector2(87, 184)
 
 [node name="spike2" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(44, 183)
+position = Vector2(44, 184)
 
 [node name="spike4" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(23, 183)
+position = Vector2(23, 184)
 
 [node name="spike3" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(65, 183)
+position = Vector2(65, 184)
 
 [node name="spike5" parent="." instance=ExtResource("11_pof1t")]
 position = Vector2(95, 23)
@@ -603,15 +603,15 @@ position = Vector2(648, 183)
 current_state = 1
 
 [node name="spike55" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(231, 71)
+position = Vector2(228, 72)
 current_state = 1
 
 [node name="spike56" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(205, 71)
+position = Vector2(204, 72)
 current_state = 1
 
 [node name="spike57" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(197, 119)
+position = Vector2(202, 119)
 rotation = 3.14159
 current_state = 1
 
@@ -621,7 +621,7 @@ rotation = 3.14159
 current_state = 1
 
 [node name="spike59" parent="." instance=ExtResource("11_pof1t")]
-position = Vector2(237, 119)
+position = Vector2(230, 119)
 rotation = 3.14159
 current_state = 1
 

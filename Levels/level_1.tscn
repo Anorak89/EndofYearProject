@@ -513,7 +513,6 @@ script = ExtResource("1_2yjfj")
 [node name="Player" parent="." instance=ExtResource("1_3pbq2")]
 position = Vector2(171, -33)
 collision_mask = 2
-max_jump = 500
 
 [node name="sfx_jump" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("4_hta5l")
