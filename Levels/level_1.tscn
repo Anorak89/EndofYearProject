@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://d36qnemkahxp0"]
+[gd_scene load_steps=24 format=3 uid="uid://d36qnemkahxp0"]
 
 [ext_resource type="Script" path="res://Script/Control/camera.gd" id="1_2yjfj"]
 [ext_resource type="PackedScene" uid="uid://em8ebl1k6tnf" path="res://Scenes/Player/player.tscn" id="1_3pbq2"]
 [ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="2_iyd8u"]
+[ext_resource type="AudioStream" uid="uid://cvev4o78bd40r" path="res://music/26 Ruin.ogg" id="2_nw2ye"]
 [ext_resource type="PackedScene" uid="uid://bsdl58nb0jf7q" path="res://Scenes/Environment/Statue/statue_1.tscn" id="3_ddirs"]
 [ext_resource type="PackedScene" uid="uid://3pqii5mc538v" path="res://Scenes/Environment/Statue/statue_2.tscn" id="4_50xd5"]
 [ext_resource type="AudioStream" uid="uid://v4eifknoxw7t" path="res://sounds/jump.wav" id="4_hta5l"]
@@ -493,6 +494,10 @@ z_index = -1
 position = Vector2(271, -1274)
 scale = Vector2(4.85313, 13.9111)
 texture = ExtResource("12_vfanb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundSprite1"]
+stream = ExtResource("2_nw2ye")
+autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

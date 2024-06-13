@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqy14lxnvonmm"]
+[gd_scene load_steps=14 format=3 uid="uid://cqy14lxnvonmm"]
 
 [ext_resource type="Texture2D" uid="uid://b3rpji4bulufv" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="1_tbr5j"]
 [ext_resource type="Texture2D" uid="uid://c4fym5sovouty" path="res://Sprites/Environment/background_sprite_1.png" id="2_bu7fh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c25su1rokyp3i" path="res://Sprites/UI/HeartSpriteSheet.png" id="9_gwt5x"]
 [ext_resource type="PackedScene" uid="uid://bvx3t0oi1pnku" path="res://Scenes/Enemy/boss.tscn" id="10_aqj0v"]
 [ext_resource type="Texture2D" uid="uid://2p3bs3ix5pke" path="res://Sprites/Interactables/coin.png" id="10_x3fh5"]
+[ext_resource type="AudioStream" uid="uid://f47amk5j4big" path="res://music/17 Rivaling Force.ogg" id="11_4aj03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s7t2"]
 texture = ExtResource("1_tbr5j")
@@ -271,3 +272,7 @@ texture_filter = 1
 position = Vector2(560, 160)
 scale = Vector2(5, 5)
 slide_on_ceiling = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_4aj03")
+autoplay = true
