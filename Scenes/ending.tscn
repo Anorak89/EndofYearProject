@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbesxhgbehiq"]
+
+[ext_resource type="Script" path="res://Scenes/ending.gd" id="1_huqv2"]
+[ext_resource type="Texture2D" uid="uid://dqgkv6skf4ohr" path="res://FinalGloomspire.png" id="2_q26ox"]
+
+[node name="Ending" type="Node"]
+script = ExtResource("1_huqv2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("2_q26ox")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 294.0
+offset_top = 328.0
+offset_right = 871.0
+offset_bottom = 410.0
+text = "---THANK YOU FOR PLAYING---"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
